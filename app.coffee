@@ -11,7 +11,7 @@ main = ->
     stream.on "data", ({id_str, user, text})->
       if text? and user.screen_name isnt BOT_ID
         console.log text
-        exec '#{AQUESTALKPI} \"#{text}\"', (err, stdout, stderr)->
+        exec '#{AQUESTALKPI} \"#{text}\" | aplay', (err, stdout, stderr)->
           if !err
             console.log "stdout:"+stdout
             console.log "stderr:"+stderr

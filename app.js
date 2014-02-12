@@ -21,7 +21,7 @@
         id_str = _arg.id_str, user = _arg.user, text = _arg.text;
         if ((text != null) && user.screen_name !== BOT_ID) {
           console.log(text);
-          return exec('#{AQUESTALKPI} \"#{text}\"', function(err, stdout, stderr) {
+          return exec('#{AQUESTALKPI} \"#{text}\" | aplay', function(err, stdout, stderr) {
             if (!err) {
               console.log("stdout:" + stdout);
               return console.log("stderr:" + stderr);
