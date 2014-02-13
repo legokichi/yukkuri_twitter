@@ -12,7 +12,7 @@ main = ->
       if text? then talk(text)
 
 talking = false
-talk = (text, cb)->
+talk = (text, cb=->)->
   if talking then return cb(false)
   talking = true
   exec "#{AQUESTALKPI} \"#{text}\" | aplay", (err, stdout, stderr)->
