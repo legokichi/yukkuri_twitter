@@ -1,13 +1,13 @@
 BOT_ID = "duxca"
 KEYS = require("./#{BOT_ID}_key")
-AQUESTALKPI = "/home/pi/aquestalkpi/AquesTalkPi -s 200"
+AQUESTALKPI = "/home/pi/aquestalkpi/AquesTalkPi"
 
 Twitter = require("twitter")
 exec = require('child_process').exec
 playing = false
 
 main = ->
-  readBible(shuffle([[matthew, mark, luke, john, acts, tomas]))
+  readBible(shuffle([matthew, mark, luke, john, acts, tomas]))
 
 shuffle = (ary)->
   m = ary.length

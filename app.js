@@ -15,8 +15,7 @@
   playing = false;
 
   main = function() {
-<<<<<<< HEAD
-    return readBible(shuffle([shikkaku], [matthew, mark, luke, john, acts, tomas]));
+    return readBible(shuffle([matthew, mark, luke, john, acts, tomas]));
   };
 
   shuffle = function(ary) {
@@ -98,28 +97,6 @@
     return exec(command, function(err, stdout, stderr) {
       talking = false;
       return cb(true);
-=======
-    var twit;
-    twit = new Twitter(KEYS);
-    return twit.stream("user", function(stream) {
-      return stream.on("data", function(_arg) {
-        var id_str, text, user;
-        id_str = _arg.id_str, user = _arg.user, text = _arg.text;
-        if ((text != null) && user.screen_name !== BOT_ID) {
-          console.log(text);
-          return exec('#{AQUESTALKPI} \"#{text}\" | aplay', function(err, stdout, stderr) {
-            if (!err) {
-              console.log("stdout:" + stdout);
-              return console.log("stderr:" + stderr);
-            } else {
-              console.log(err);
-              console.log(err.code);
-              return console.log(err.signal);
-            }
-          });
-        }
-      });
->>>>>>> cd351b950ef01b5fee8fcdab9926b0cc8fcfe103
     });
   };
 
